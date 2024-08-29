@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD Nomor 4</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <img src="" alt="" id="output_gambar" width="200px">
+        <br>
+        <label for="">Ubah :</label>
+        <select name="select_gambar" id="select_gambar">
+            <option disabled hidden selected>Pilih Gambar</option>
+            <option value="G1">Gambar 1</option>
+            <option value="G2">Gambar 2</option>
+            <option value="G3">Gambar 3</option>
+        </select>
+        <select name="select_bentuk" id="select_bentuk">
+            <option disabled hidden selected>Pilih Bentuk</option>
+            <option value="Lingkaran">Lingkaran</option>
+            <option value="Segitiga">Segitiga</option>
+            <option value="Kotak">Kotak</option>
+        </select>
+        <select name="select_warna" id="select_warna">
+            <option disabled hidden selected>Pilih Warna Border</option>
+            <option value="Merah">Merah</option>
+            <option value="Kuning">Kuning</option>
+            <option value="Hijau">Hijau</option>
+        </select>
+        <button type="button" onclick="output(this)">Submit</button>
+    </form>
+    <script>
+        function output(e) {
+                let selectGambar = document.getElementById('select_gambar').value;
+                let selectBentuk = document.getElementById('select_bentuk').value;
+                let selectWarna = document.getElementById('select_warna').value;
+                let gambarOutput = document.getElementById('output_gambar');
+                if (selectGambar == "G1") {
+                    gambarOutput.src = "img/produk1.jpeg";
+                } else if (selectGambar == "G2") {
+                    gambarOutput.src = "img/produk2.jpeg";
+                } else {
+                    gambarOutput.src = "img/produk3.jpeg";
+                }
+
+                if (selectBentuk == "Lingkaran") {
+                    gambarOutput.style.borderRadius = "50%";
+                } else if (selectBentuk == "Segitiga") {
+                    gambarOutput.style.clipPath = "polygon(50% 0%, 0% 100%, 100% 100%)";
+                } else {
+                    gambarOutput.style.borderRadius = "none";
+                }
+
+                if (selectWarna == "Merah") {
+                    gambarOutput.style.border = "5px solid red";
+                } else if (selectWarna == "Kuning") {
+                    gambarOutput.style.border = "5px solid yellow";
+                } else {
+                    gambarOutput.style.border = "5px solid green";
+                }
+        }
+    </script>
+</body>
+</html>

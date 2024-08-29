@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Ada Perekoemandasi?</p>
+        <select name="select_rekomen" id="select_rekomen" onchange="changeOpsi(this)">
+            <option disabled hidden selected>Pilih</option>
+            <option value="A">Ada</option>
+            <option value="T">Tidak</option>
+        </select>
+        <br>
+        <br>
+        <div id="tabel">
+        <div id="name">
+            <label for="">Nama Lengkap Perekoemandasi</label>
+            <br>
+            <input type="text" name="name" id="name">
+        </div>
+        <br>
+        <p>Kategori Perekoemandasi</p>
+        <select name="kategori" id="kategori" onchange="changeKate(this)">
+            <option disabled hidden selected>Pilih</option>
+            <option value="B">Pekerja BRI</option>
+            <option value="P">Purnabakti</option>
+        </select>
+        <br>
+        <br>
+        <div id="select_nomor">
+            <label for="">Nomor ID Pegawai/KTA/PN/MP</label>
+            <br>
+            <input type="text" name="nomor" id="nomor">
+        </div>
+        <br>
+        <div id="select_jabatan">
+            <label for="">Jabatan Perekoemandasi</label>
+            <br>
+            <input type="text" name="jabatan" id="jabatan">
+        </div>
+        </div>
+    </form>
+
+    <script>
+        function changeOpsi(e) {
+            let selectRekomen = document.getElementById("select_rekomen");
+            let selectTabel = document.getElementById("tabel");
+            if (e.value == "T") {
+                selectTabel.style.display = "none";
+            } else {
+                selectTabel.style.display = "block"; 
+            }
+        }
+        function changeKate(e) {
+            let selectKategori = document.getElementById("select_kategori");
+            let selectJabatan = document.getElementById("select_jabatan");
+            if (e.value == "P") {
+                selectJabatan.style.display = "none";
+            } else {
+                selectJabatan.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

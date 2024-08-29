@@ -1,0 +1,27 @@
+.daftar {
+    border: 1px solid;
+    width: 15%;
+    text-align: center;
+    padding: 1opx;
+    margin-right: auto;
+}
+
+.verifikasi {
+    border: 1px solid;
+    text-align: center;
+    width: 15%;
+    margin-left: auto;
+}
+
+.pengumuman {
+    border: 1px solid ;
+    text-align: center;
+    width: 15%;
+    margin-right: auto;
+}
+
+.card {
+    padding-left: 80px;
+    padding-right: 80px;
+
+}

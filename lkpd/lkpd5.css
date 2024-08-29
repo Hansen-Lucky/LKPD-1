@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#countdown {
+    font-size: 48px;
+    margin: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.time {
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid black;
+    margin-top: 300px;
+    margin-right: 750px;
+    margin-left: 750px;
+}
+
+button {
+    width: 300px;
+}
